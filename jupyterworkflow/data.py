@@ -23,7 +23,7 @@ def get_fremont_data(filename='Fremont.csv', url=FREMONT_URL, force_download=Fal
         Fremont bridge bike data downloaded from seattle.gov website
     """
     if force_download or not os.path.exists(filename):
-        urlretrieve(URL, 'Fremont.csv')
+        urlretrieve(url, 'Fremont.csv')
     data = pd.read_csv('Fremont.csv', index_col='Date')
     
     try:
